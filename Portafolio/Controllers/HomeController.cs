@@ -15,6 +15,8 @@ namespace Portafolio.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Nombre = "Rafael Jimenez";
+            ViewBag.Edad = 78;
             return View();
         }
 
