@@ -17,7 +17,7 @@ namespace Portafolio.Controllers
         {
             Persona persona = new Persona();
             persona.Nombre = "Rafael Jimenez";
-            persona.Edad = 25;
+            persona.Edad = 15;
             return View(persona);
         }
 

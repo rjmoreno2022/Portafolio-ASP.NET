@@ -1,11 +1,34 @@
 ﻿@model Persona
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "PAGINA PRINCIPAL";
+    string ConvertirEnMayus(string valor)
+    {
+        return valor.ToUpper();
+    }
+
+    DateTime hoy = DateTime.Now;
+
+    var nombres = new List<string>(){ "Felipe", "Claudia", "Roberto" };
 }
 
 <div class="text-center">
-    <h1 class="display-4">Soy @Model.Nombre (@Model.Edad)</h1>
+    <ul>
+        @foreach(var nombre in nombres )
+        {
+            <li>@nombre</li>
+        }
+    </ul>
+
+    <h1 class="display-4">Soy @ConvertirEnMayus(Model.Nombre.ToUpper()) (@Model.Edad)</h1>
+    <h4>@hoy.ToString("dd/MM/yyyy hh:mm:ss tt")</h4>
+    @if(Model.Edad >= 18)
+    {
+        <h4>Eres mayor de edad! Puedes pasar <button>Entrar</button></h4>
+    }else
+    {
+        <h4>Eres menor! Lárgate.</h4>
+    }
     <h2>Soy un Desarrollador de Software FullStack especializado en tecnologías .NET y JavaScript</h2>
     <img id = "foto" src="~/imagenes/foto.jpeg" alt="Foto de Rafael" />
 </div>
