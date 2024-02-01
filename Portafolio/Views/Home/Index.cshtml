@@ -1,34 +1,28 @@
-﻿@model Persona
-
-@{
+﻿@{
     ViewData["Title"] = "PAGINA PRINCIPAL";
-    string ConvertirEnMayus(string valor)
-    {
-        return valor.ToUpper();
-    }
-
-    DateTime hoy = DateTime.Now;
-
-    var nombres = new List<string>(){ "Felipe", "Claudia", "Roberto" };
 }
 
 <div class="text-center">
-    <ul>
-        @foreach(var nombre in nombres )
-        {
-            <li>@nombre</li>
-        }
-    </ul>
+    <h1 class="display-4">Soy Rafael Jiménez</h1>
 
-    <h1 class="display-4">Soy @ConvertirEnMayus(Model.Nombre.ToUpper()) (@Model.Edad)</h1>
-    <h4>@hoy.ToString("dd/MM/yyyy hh:mm:ss tt")</h4>
-    @if(Model.Edad >= 18)
-    {
-        <h4>Eres mayor de edad! Puedes pasar <button>Entrar</button></h4>
-    }else
-    {
-        <h4>Eres menor! Lárgate.</h4>
-    }
-    <h2>Soy un Desarrollador de Software FullStack especializado en tecnologías .NET y JavaScript</h2>
+    <h2>Soy un Ingeniero en Informática y Desarrollador de Software FullStack especializado en tecnologías .NET y JavaScript</h2>
     <img id = "foto" src="~/imagenes/foto.jpeg" alt="Foto de Rafael" />
+</div>
+
+<div class="text-center">
+    <img id="imagen-js" src="~/imagenes/javascript-logo.png" alt="js logo" class="p-0 m-0" />
+    <img id="imagen-dotnet" src="~/imagenes/dotnet-imagen-2.png" alt="dotnet logo" />
+</div>
+
+<div class="row justify-content-center text-center bg-primary">
+    <div class="col col-md-7 seccion-bienvenida">
+        <h1>Te doy la bienvenida a mi portafolio</h1>
+        <p>
+            Soy un desarrollador de software e Ingeniero en Informática con experiencia en .NET Framework y SQL. Mi pasión por la tecnología y mi habilidad para crear soluciones innovadoras me han llevado a desempeñar un papel clave en el desarrollo y mantenimiento de software en un entorno dinámico.
+
+            Destaco por mi enfoque colaborativo y mi capacidad para trabajar en equipo con otros desarrolladores donde logro emplear mis conocimientos en Git y en metodologías como SCRUM, lo que me ha permitido integrarme exitosamente con diferentes equipos de profesionales. Mi dedicación y compromiso me han llevado a enfrentar desafíos con confianza y a superarlos con éxito.
+
+            Busco continuamente aprender y crecer profesionalmente, manteniéndome al tanto de las últimas tendencias y tecnologías en el campo del desarrollo de software. Mi objetivo es contribuir al éxito de proyectos emocionantes mientras desarrollo mis habilidades y lídero a equipos de alto rendimiento.
+        </p>
+    </div>
 </div>
