@@ -5,12 +5,12 @@
 }
 
 .seccion-bienvenida{
-    margin: 5rem 0 10rem 0;
+    margin: 10rem 0 10rem 0;
     color: white;
 }
 
 .seccion-bienvenida h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .seccion-bienvenida p {
@@ -25,4 +25,13 @@
 
 #imagen-js {
     width: 155px;
+}
+
+.cabecera{
+    font-weight: bold;
+}
+
+.habilidades ul{
+    list-style: none;
+    padding-left: 0px;
 }
