@@ -17,7 +17,7 @@ namespace Portafolio.Controllers
         {
             var proyectos = ObtenerProyectos().Take(3).ToList();
             var modelo = new HomeIndexViewModel() { Proyectos = proyectos };
-            return View();
+            return View(modelo);
         }
 
         private List<Proyecto> ObtenerProyectos()
