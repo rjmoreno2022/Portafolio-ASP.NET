@@ -37,6 +37,12 @@ namespace Portafolio.Controllers
             return View();
         }
 
+        public IActionResult Proyectos() 
+        { 
+            var proyectos = repositoriosProyectos.ObtenerProyectos();
+            return View(proyectos);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
