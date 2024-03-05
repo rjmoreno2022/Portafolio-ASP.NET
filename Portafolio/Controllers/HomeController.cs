@@ -43,7 +43,19 @@ namespace Portafolio.Controllers
             return View(proyectos);
         }
 
+        [HttpGet] //No es obligatorio poner esto, porque el HttpGet es el atributo por defecto.
         public IActionResult Contacto()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Contacto(ContactoViewModel contactoViewModel)
+        { 
+            return RedirectToAction("Gracias");
+        }
+
+        public IActionResult Gracias()
         {
             return View();
         }
