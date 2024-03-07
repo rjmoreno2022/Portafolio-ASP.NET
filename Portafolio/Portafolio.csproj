@@ -10,4 +10,8 @@
     <Folder Include="wwwroot\imagenes\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="SendGrid" Version="9.29.2" />
+  </ItemGroup>
+
 </Project>
